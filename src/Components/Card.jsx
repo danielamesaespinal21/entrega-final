@@ -1,23 +1,32 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ContextFav } from "../context/ContextFav";
 
 const Card = ({ name, username, id }) => {
+  const { state, dispatch } = useContext(ContextFav);
 
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
-  }
+  const addFav = () => {
+  dispatch({type:"ADD", payload:{name, username, id}})
+  };
+  const borrarFav = () => {
+    dispatch({ type: "REMOVE", payload: { name, username, id } })
+  };
 
   return (
     <div className="card">
-<p>{name}</p>
-<p>{username}</p>
-
-        {/* En cada card deberan mostrar en name - username y el id */}
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+      <img src="./images/doctor.jpg" style={{ width: "15vw" }} />
+      <p>{name}</p>
+      <p>{username}</p>
+      {state?.data.some((element) => element.id === id) ? (
+        <button onClick={borrarFav} className="favButton">
+          Borrar fav
+        </button>
+      ) : (
+        <button onClick={addFav} className="favButton">
+          Agregar fav
+        </button>
+      )}
+      <Link to={`/users/${id}`}>ver mas</Link>
     </div>
   );
 };

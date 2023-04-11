@@ -4,9 +4,11 @@ import Detail from "../Routes/Detail";
 import Favs from "../Routes/Favs";
 
 
-export const navegacion = [{
+export const navegacion = [
+
+    {
         id: 1,
-        path: "/home",
+        path: "/",
         Element: Home
     },
     {
@@ -27,4 +29,4 @@ export const navegacion = [{
 
 ]
 
-export { login }
+// export { login }
