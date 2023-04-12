@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Card from "../Components/Card";
 import { ContextFav } from "../context/ContextFav";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -13,7 +12,7 @@ const Favs = () => {
       <div className="card-grid">
         {state.data.map((data) => (
           <div key = {data.id}>
-            <img src="./images/doctor.jpg" style={{ width: "15vw" }} />
+            <img src="./images/doctor.jpg" alt="doctor" style={{ width: "15vw" }} />
             <p>{data.name}</p>
             <p>{data.username}</p>
           </div>

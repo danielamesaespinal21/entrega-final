@@ -14,7 +14,7 @@ const Card = ({ name, username, id }) => {
 
   return (
     <div className="card">
-      <img src="./images/doctor.jpg" style={{ width: "15vw" }} />
+      <img src="./images/doctor.jpg" alt="doctor" style={{ width: "15vw" }} />
       <p>{name}</p>
       <p>{username}</p>
       {state.data.some((element) => element.id === id) ? (

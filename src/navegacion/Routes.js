@@ -9,7 +9,7 @@ export const navegacion = [
 
     {
         id: 1,
-        path: "/",
+        path: "/home",
         Element: Home
     },
     {
