@@ -17,7 +17,7 @@ const Card = ({ name, username, id }) => {
       <img src="./images/doctor.jpg" style={{ width: "15vw" }} />
       <p>{name}</p>
       <p>{username}</p>
-      {state?.data.some((element) => element.id === id) ? (
+      {state.data.some((element) => element.id === id) ? (
         <button onClick={borrarFav} className="favButton">
           Borrar fav
         </button>

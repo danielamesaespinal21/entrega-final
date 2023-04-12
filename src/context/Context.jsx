@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useState, useContext, createContext} from 'react'
 
-const Context = () => {
-  return (
-    <div>Context</div>
-  )
-}
+export const Context = createContext({});
 
-export default Context
+const ContextProvider = ({ children }) => {
+    const [isLogged, setIsLogged] = useState(localStorage.getItem("auth") ? true : false);
+
+    const manejoLogin=()=>{
+    setIsLogged(true)
+    localStorage.setItem("auth",true)
+
+    }
+
+    const estado = {
+    isLogged,
+    manejoLogin,
+    };
+    return <Context.Provider value={estado}>{children}</Context.Provider>;
+};
+
+export default ContextProvider

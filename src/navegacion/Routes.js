@@ -2,6 +2,7 @@ import Contact from "../Routes/Contact";
 import Home from "../Routes/Home";
 import Detail from "../Routes/Detail";
 import Favs from "../Routes/Favs";
+import Login from "../Routes/Login";
 
 
 export const navegacion = [
@@ -18,7 +19,7 @@ export const navegacion = [
     },
     {
         id: 3,
-        path: "/users/detail",
+        path: "/users/:id",
         Element: Detail
     },
     {
@@ -29,4 +30,4 @@ export const navegacion = [
 
 ]
 
-// export { login }
+export { Login }

@@ -11,7 +11,7 @@ const Favs = () => {
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {state?.data.map((data) => (
+        {state.data.map((data) => (
           <div key = {data.id}>
             <img src="./images/doctor.jpg" style={{ width: "15vw" }} />
             <p>{data.name}</p>
