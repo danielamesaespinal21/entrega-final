@@ -9,7 +9,7 @@ const Favs = () => {
   return (
     <>
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
+      <div className="card1">
         {state.data.map((data) => (
           <div key = {data.id}>
             <img src="./images/doctor.jpg" alt="doctor" style={{ width: "15vw" }} />

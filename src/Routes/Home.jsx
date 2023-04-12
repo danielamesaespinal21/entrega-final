@@ -21,11 +21,11 @@ const Home = () => {
 
 
   return (
-    <main className="" >
+    <main className="card-grid" >
       <h1>Home</h1>
-      <div className='card-grid'>
+      <div className="card-grid">
         {/* Aqui deberias renderizar las cards */}
-        <div>
+        <div className='card1'>
           {
             datos.length
             ? datos.map((detail) =>

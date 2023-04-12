@@ -17,8 +17,9 @@ const Login = () => {
     console.log(values);
     };
     return (
-        <form id='form' onSubmit={ handleSubmit } className='' >
-        <div className=''>
+        <form id='form' onSubmit={ handleSubmit } className='login' >
+        <div className='login1'>
+            <h3>Login</h3>
             <input
             name='email'
             size='small'
